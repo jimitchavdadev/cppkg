@@ -22,19 +22,29 @@ The goal of this project is to provide a C++ package management experience simil
 The project is organized into a `pkg` directory for modularity, with `main.go` serving as the CLI entry point.
 
 ```
-cpp-package-manager/
-├── cppkg               # Compiled binary
 ├── go.mod
-├── main.go             # Main CLI entrypoint
+├── go.sum
+├── LICENSE
+├── main.go
 ├── pkg/
 │   ├── config/
-│   │   └── config.go   # Structs and functions for cppkg.json/lock
+│   │   └── config.go
 │   ├── git/
-│   │   └── git.go      # Git command wrapper functions
-│   └── resolver/
-│       └── install.go  # Core installation and resolution logic
-└── check.sh            # Full-featured test script
+│   │   └── git.go
+│   ├── resolver/
+│   │   ├── conflicts/
+│   │   │   └── resolve.go
+│   │   ├── dependency/
+│   │   │   └── discover.go
+│   │   └── install.go
+│   ├── types/
+│   │   ├── types_extra.go
+│   │   └── types.go
+│   └── utils/
+│       └── utils.go
+└── README.md
 ```
+
 
 -----
 
